@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="DoRin" />
+
+
+
+<meta name="description" content="使用hexo 编写博客会发现一个问题，使用不同的电脑来更新博客会比较麻烦，我在尝试几次后分享下几种方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo不同电脑的提交说明">
+<meta property="og:url" content="http://www.codecooler.com/2017/02/22/不同电脑的提交说明/index.html">
+<meta property="og:site_name" content="DoRin&#39;s Blog">
+<meta property="og:description" content="使用hexo 编写博客会发现一个问题，使用不同的电脑来更新博客会比较麻烦，我在尝试几次后分享下几种方法">
+<meta property="og:image" content="http://p1.bqimg.com/567571/1e30831dfcbd5190.png">
+<meta property="og:updated_time" content="2017-05-25T01:12:26.393Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo不同电脑的提交说明">
+<meta name="twitter:description" content="使用hexo 编写博客会发现一个问题，使用不同的电脑来更新博客会比较麻烦，我在尝试几次后分享下几种方法">
+<meta name="twitter:image" content="http://p1.bqimg.com/567571/1e30831dfcbd5190.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="DoRin&#39;s Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>hexo不同电脑的提交说明 | DoRin&#39;s Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/head.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">DoRin</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">The time I have to choose,the time I have no choice</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:769294961@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/codecoolerdorin" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/123-ddd-fff/">123 ddd fff</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">I&#39;m learning helloworld</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">DoRin</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/head.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">DoRin</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">The time I have to choose,the time I have no choice</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:769294961@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/codecoolerdorin" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-不同电脑的提交说明" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/22/不同电脑的提交说明/" class="article-date">
+      <time datetime="2017-02-22T02:17:02.000Z" itemprop="datePublished">2017-02-22</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo不同电脑的提交说明
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>使用hexo 编写博客会发现一个问题，使用不同的电脑来更新博客会比较麻烦，我在尝试几次后分享下几种方法</p>
+<a id="more"></a>
+<h2 id="方法前提"><a href="#方法前提" class="headerlink" title="方法前提"></a>方法前提</h2><p>首先要保证编写电脑的机器要安装hexo组件，该步骤可以自行百度</p>
+<h2 id="方法一-拷贝工作环境"><a href="#方法一-拷贝工作环境" class="headerlink" title="方法一 拷贝工作环境"></a>方法一 拷贝工作环境</h2><p>如果我们在hexo文件下执行 hexo init ，那只要把hexo文件夹整个压缩一下，这个压缩包重新解压后可以直接进行hexo操作，无需重新hexo init，例如，解压后可以直接进行hEXO new “helloworld”操作。这样我们可以把压缩包拷贝到u盘或者网盘里，就可以进行跨电脑操作了</p>
+<h2 id="方法二-利用github保存工作环境"><a href="#方法二-利用github保存工作环境" class="headerlink" title="方法二 利用github保存工作环境"></a>方法二 利用github保存工作环境</h2><p>当然我们可以利用github保存方法一中的压缩包，但是整个工程的代码很杂乱，我们只需要保存关键的文件就行了，这样git pull 的时候还可以快一点</p>
+<h3 id="保存的关键文件"><a href="#保存的关键文件" class="headerlink" title="保存的关键文件"></a>保存的关键文件</h3><p>新建文件夹hexo_bk用于保存关键的文件</p>
+<blockquote>
+<p>source文件夹</p>
+</blockquote>
+<p>该文件件是保存md文件，图片资源以及CNME等文件的关键文件夹</p>
+<blockquote>
+<p>themes文件夹</p>
+</blockquote>
+<p>该文件夹是保存主题的文件夹，不过提交的时候需要将主题压缩提交，否则有的文件会被git忽略就很麻烦</p>
+<blockquote>
+<p>_config.yml 文件</p>
+</blockquote>
+<p>该文件保存主题的关键配置，包括标题名，使用主题等信息</p>
+<h3 id="更换电脑后的操作"><a href="#更换电脑后的操作" class="headerlink" title="更换电脑后的操作"></a>更换电脑后的操作</h3><p>在提交好关键文件后就可以跨电脑操作了</p>
+<blockquote>
+<p>新建文件夹hexo，在该文件夹下执行hexo init</p>
+</blockquote>
+<p>搭建hexo初始环境，如果不想要helloworld可以将source_posts\下的md文件干掉</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<p>如果不执行该语句，hexo d的时候会报 ERROR Deployer not found: git 或者 ERROR Deployer not found: github的cu错误</p>
+<blockquote>
+<p>git clone xxxxxx..github.io</p>
+</blockquote>
+<p>将仓库拷贝下来，并解压theme</p>
+<blockquote>
+<p>hexo_bk和hexo对比</p>
+</blockquote>
+<p>将关键文件拷贝过去，至此就可以写博客了</p>
+<h3 id="日常维护"><a href="#日常维护" class="headerlink" title="日常维护"></a>日常维护</h3><p>写完博客后，将md文件提交到仓库就行了，如果修改主题相关的东西，改哪提交哪</p>
+<h3 id="推荐软件"><a href="#推荐软件" class="headerlink" title="推荐软件"></a>推荐软件</h3><blockquote>
+<p>beyond compare</p>
+</blockquote>
+<p>程序员都知道，一块十分牛逼的比较软件，这样将整个文件进行对比会十分的舒服<br><img src="http://p1.bqimg.com/567571/1e30831dfcbd5190.png" alt="beyondcompare"></p>
+<h2 id="方法三-欢迎补充指错"><a href="#方法三-欢迎补充指错" class="headerlink" title="方法三 欢迎补充指错"></a>方法三 欢迎补充指错</h2>
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/05/25/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/02/20/yelee使用说明/">
+                    yelee 使用说明（摘自yelee README文件）
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法前提"><span class="toc-number">1.</span> <span class="toc-text">方法前提</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法一-拷贝工作环境"><span class="toc-number">2.</span> <span class="toc-text">方法一 拷贝工作环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法二-利用github保存工作环境"><span class="toc-number">3.</span> <span class="toc-text">方法二 利用github保存工作环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#保存的关键文件"><span class="toc-number">3.1.</span> <span class="toc-text">保存的关键文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更换电脑后的操作"><span class="toc-number">3.2.</span> <span class="toc-text">更换电脑后的操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#日常维护"><span class="toc-number">3.3.</span> <span class="toc-text">日常维护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#推荐软件"><span class="toc-number">3.4.</span> <span class="toc-text">推荐软件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法三-欢迎补充指错"><span class="toc-number">4.</span> <span class="toc-text">方法三 欢迎补充指错</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/02/22/不同电脑的提交说明/" data-title="hexo不同电脑的提交说明" data-url="http://www.codecooler.com/2017/02/22/不同电脑的提交说明/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"codecooler"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/05/25/hello-world/" title="上一篇: Hello World">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/02/20/yelee使用说明/" title="下一篇: yelee 使用说明（摘自yelee README文件）">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/25/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/22/不同电脑的提交说明/">hexo不同电脑的提交说明</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/yelee使用说明/">yelee 使用说明（摘自yelee README文件）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/写在前面/">写在前面</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/markdown语法小样/">markdown语法小样</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2017 DoRin
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
